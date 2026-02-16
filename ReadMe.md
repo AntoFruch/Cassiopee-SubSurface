@@ -1,7 +1,7 @@
 # Cassiopée SubSurface
 
-Membres du Projet : BENOIS Loup, FRUCHET Antonin
-Coordinateur : TAILLANDIER-LOIZE Thierry
+* Membres du Projet : BENOIS Loup, FRUCHET Antonin
+* Coordinateur : TAILLANDIER-LOIZE Thierry
 
 ## TODO
 * Planning type Gant.
