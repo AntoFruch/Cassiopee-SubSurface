@@ -4,5 +4,5 @@
 * Coordinateur : TAILLANDIER-LOIZE Thierry
 
 ## TODO
-* Planning type Gant.
+* Planning type Gantt.
 * Comprendre le fonctionnement de la librairie libdivecomputer.
