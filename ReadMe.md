@@ -9,4 +9,4 @@
 
 ## Diagramme de Gantt 
 
-![Diagramme de Gantt](./out/gantt/gantt/GanttChart.svg)
+![Diagramme de Gantt](./plant-uml-out/gantt/GanttChart.svg)
