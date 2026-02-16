@@ -1,0 +1,40 @@
+@startgantt GanttChart
+Project starts 2026-02-16
+
+' Détail des zones a exclure du temps de travail (vacances / CF / autres obligations)
+' syntaxe  : {date} is closed / {date} to {date} is closed
+    
+    ' Vacances d'hiver
+    2026-02-28 to 2026-03-8 is closed
+
+    ' vacances de printemps
+
+    ' Obligations Loup
+
+    ' Obligations Antonin
+
+' Fin
+
+' Detail des taches à effectuer, syntaxe ci-dessous : 
+'   * -- Categorie -- 
+'   * [nom de la tâche] requires/lasts X days/weeks
+'   * possibilité de coloriser avec "and is colored in {couleur}" (les mots clés des couleurs sont préshot par l'extension PlantUML)
+-- Gestion de Projet & Livrables Cassiopée--  
+[Plannification] requires 5 days and is colored in SkyBlue
+
+-- Documentation --
+[Documentation sur libDiveComputer] requires 2 weeks and is colored in IndianRed
+
+' Fin du détail des tâches
+
+'------------------------------------------------------------
+
+' Détail des dates de début/fin
+'   * [nom de la tache] starts at {date}
+'   * une date peut être la fin d'un évenement ("X's end") ou son debut ("X's start")
+
+[Plannification] starts at 2026-02-16
+[Documentation sur libDiveComputer] starts at 2026-02-20
+
+' Fin du détail des dates
+@endgantt
