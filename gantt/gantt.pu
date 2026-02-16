@@ -24,6 +24,11 @@ Project starts 2026-02-16
 
 -- Documentation --
 [Documentation sur libDiveComputer] requires 2 weeks and is colored in IndianRed
+[Documentaion et installation C++/Qt] requires 3 weeks and is colored in IndianRed
+
+-- Interface -- 
+
+-- Traitement des données -- 
 
 ' Fin du détail des tâches
 
@@ -34,7 +39,9 @@ Project starts 2026-02-16
 '   * une date peut être la fin d'un évenement ("X's end") ou son debut ("X's start")
 
 [Plannification] starts at 2026-02-16
+
 [Documentation sur libDiveComputer] starts at 2026-02-20
+[Documentaion et installation C++/Qt] starts at 2026-02-16
 
 ' Fin du détail des dates
 @endgantt
