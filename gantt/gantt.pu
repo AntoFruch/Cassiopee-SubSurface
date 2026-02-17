@@ -8,6 +8,7 @@ Project starts 2026-02-16
     2026-02-28 to 2026-03-8 is closed
 
     ' vacances de printemps
+    2026-04-18 to 2026-05-04 is closed
 
     ' Obligations Loup
 
@@ -23,8 +24,8 @@ Project starts 2026-02-16
 [Plannification] requires 5 days and is colored in SkyBlue
 
 -- Documentation --
-[Documentation sur libDiveComputer] requires 2 weeks and is colored in IndianRed
-[Documentaion et installation C++/Qt] requires 3 weeks and is colored in IndianRed
+[libDiveComputer] requires 2 weeks and is colored in IndianRed
+[C++/Qt] requires 3 weeks and is colored in IndianRed
 
 -- Interface -- 
 
@@ -40,8 +41,8 @@ Project starts 2026-02-16
 
 [Plannification] starts at 2026-02-16
 
-[Documentation sur libDiveComputer] starts at 2026-02-20
-[Documentaion et installation C++/Qt] starts at 2026-02-16
+[libDiveComputer] starts at 2026-02-20
+[C++/Qt] starts at 2026-02-16
 
 ' Fin du détail des dates
 @endgantt
