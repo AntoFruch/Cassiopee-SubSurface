@@ -23,13 +23,21 @@ Project starts 2026-02-16
 -- Gestion de Projet & Livrables Cassiopée--  
 [Plannification] requires 5 days and is colored in SkyBlue
 
--- Documentation --
-[libDiveComputer] requires 2 weeks and is colored in IndianRed
-[C++/Qt] requires 3 weeks and is colored in IndianRed
-
 -- Interface -- 
+[Doc Interface] requires 12 days and is colored in IndianRed
+[Tests QML] requires 10 days
+[Vue Listing] requires 1 week
+[Vue Details] requires 3 week
 
 -- Traitement des données -- 
+[Doc données] requires 1 weeks and is colored in IndianRed
+[Tests libdive] requires 1 weeks
+[Récupération données] requires 5 days
+[Wrapper] requires 5 days
+
+-- Intégration --
+[Integration Listing] requires 2 weeks
+[Integration Details] requires 3 weeks
 
 ' Fin du détail des tâches
 
@@ -41,8 +49,26 @@ Project starts 2026-02-16
 
 [Plannification] starts at 2026-02-16
 
-[libDiveComputer] starts at 2026-02-20
-[C++/Qt] starts at 2026-02-16
+' Phase doc et tests
+[Doc données] starts at 2026-02-16
+[Tests libdive] starts at [Doc données]'s end
+
+[Doc Interface] starts at 2026-02-16
+[Tests QML] starts at [Doc Interface]'s end
+
+' Phase developpement
+[Vue Listing] starts at [Tests QML]'s end
+[Vue Details] starts at [Vue Listing]'s end
+
+[Récupération données] starts at [Tests libdive]'s end
+[Wrapper] starts at [Récupération données]'s end
+
+'Phase intégration interface / back-end
+
+[Integration Listing] starts at [Wrapper]'s end
+[Integration Listing] starts at [Vue Listing]'s end
+[Integration Details] starts at [Wrapper]'s end
+[Integration Details] starts at [Vue Details]'s end
 
 ' Fin du détail des dates
 @endgantt
