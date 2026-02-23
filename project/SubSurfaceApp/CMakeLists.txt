@@ -4,7 +4,10 @@ project(SubSurfaceApp VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS
+    Quick
+    QuickControls2
+)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -16,6 +19,11 @@ qt_add_qml_module(appSubSurfaceApp
     URI SubSurfaceApp
     QML_FILES
         Main.qml
+        QML_FILES
+        QML_FILES
+        QML_FILES pages/DiveList.qml
+        QML_FILES overlay/Header.qml
+        QML_FILES overlay/AddDiveButton.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -29,8 +37,9 @@ set_target_properties(appSubSurfaceApp PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appSubSurfaceApp
-    PRIVATE Qt6::Quick
+target_link_libraries(appSubSurfaceApp PRIVATE
+    Qt6::Quick
+    Qt6::QuickControls2
 )
 
 include(GNUInstallDirs)
