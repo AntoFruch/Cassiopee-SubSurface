@@ -1,5 +1,5 @@
 # VSCODE
-.vscode/*
+.vscode/
 
 # MACOS
 .DS_Store
@@ -7,3 +7,4 @@
 # Projet
 lib/
 tests/
+build/
