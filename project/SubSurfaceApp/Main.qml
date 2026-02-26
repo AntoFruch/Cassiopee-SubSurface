@@ -11,16 +11,19 @@ ApplicationWindow {
     height: 750
     title: "Subsurface"
 
+    required property var builtInStyles
+
     // ── Colors ──────────────────────────────────────────────────
 
     readonly property bool darkMode: Qt.styleHints.colorScheme === Qt.Dark
 
+    readonly property color bgColor : darkMode ? "#000000" : "#FFFFFF"
     readonly property color textColor : darkMode ? "#FFFFFF" : "#000000"
     readonly property color listButtonColor : darkMode ?  "#333333" : "#eeeeee"
     readonly property color separatorColor : darkMode ? "#1C1C1C" : "#CCCCCC"
     readonly property color accentColor: "#1981BD"
 
-    // ── Hardcoded dive list ──────────────────────────────────────────────────
+    // ── Hardcoded dive list | expected to be deleted soon ────────────────────────────────
     ListModel {
         id: diveModel
         ListElement { name: "Cool Dive | 10/10/2026" }
@@ -44,11 +47,18 @@ ApplicationWindow {
 
         // ── Header bar ──────────────────────────────────────────────────────
         Overlay.Header{
+            id: header
             title: "Saved Dives"
         }
-        // ── Dive list ────────────────────────────────────────────────────────
-        Pages.DiveList{
-            diveModel: diveModel
+        // --
+        StackView{
+            id: stack
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            initialItem: Pages.DiveList {
+                    diveModel: diveModel
+            }
         }
     }
 

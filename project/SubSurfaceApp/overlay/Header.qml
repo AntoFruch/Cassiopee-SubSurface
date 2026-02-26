@@ -18,26 +18,44 @@ Rectangle {
         color: "white"
     }
 
-    // Settings button (gear icon via unicode)
-    Rectangle {
-        anchors.right: parent.right
-        anchors.rightMargin: 16
-        anchors.verticalCenter: parent.verticalCenter
-        width: 44
-        height: 44
-        radius: 22
-        color: "transparent"
 
-        Text {
-            anchors.centerIn: parent
-            text: "\u2699"   // ⚙ gear
-            font.pixelSize: 70
-            color: "white"
-        }
+    // Settings Button
+    Image {
+        id: settingsBtn
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.rightMargin: 16
+        height: parent.height * 2 / 3
+
+        source: "qrc:/images/settings"
+        fillMode: Image.PreserveAspectFit
 
         MouseArea {
             anchors.fill: parent
             onClicked: console.log("settings clicked")
+        }
+    }
+
+    // Back Button
+    Image {
+        id: backBtn
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.leftMargin: 16
+        height: parent.height * 2 / 3
+
+        source: "qrc:/images/back"
+        fillMode: Image.PreserveAspectFit
+
+        visible: stack.depth > 1
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                if (stack.depth > 1) {
+                    stack.pop()
+                }
+            }
         }
     }
 }

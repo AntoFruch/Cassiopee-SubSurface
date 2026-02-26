@@ -50,6 +50,8 @@ int main(int argc, char *argv[])
     engine.setInitialProperties({
         { "builtInStyles", builtInStyles }
     });
+
+
     // Generation du template QML
     engine.loadFromModule("SubSurfaceApp", "Main");
 

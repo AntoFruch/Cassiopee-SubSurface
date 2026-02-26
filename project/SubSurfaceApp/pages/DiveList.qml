@@ -52,7 +52,10 @@ ListView {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: console.log("plongée " + model.name + " clicked")
+                onClicked: {
+                    stack.push("DiveDetails.qml", {"dive": model})
+                    header.title = model.name
+                    }
             }
         }
     }

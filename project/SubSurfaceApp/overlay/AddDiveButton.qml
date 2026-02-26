@@ -12,13 +12,14 @@ Rectangle {
         bottomMargin: 24
     }
 
-    Text {
+    visible: stack.depth <= 1
+
+    Image {
         anchors.centerIn: parent
-        text: "+"
-        font.pixelSize: 36
-        color: "white"
-        // nudge the + up slightly so it looks visually centred
-        topPadding: -2
+        height: parent.height * 3 / 4
+
+        source: "qrc:/images/plus"
+        fillMode: Image.PreserveAspectFit
     }
 
     MouseArea {
