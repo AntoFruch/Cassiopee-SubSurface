@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 REQUIRED COMPONENTS
     Quick
     QuickControls2
+    Graphs
 )
 
 qt_standard_project_setup(REQUIRES 6.8)
@@ -46,6 +47,7 @@ set_target_properties(appSubSurfaceApp PROPERTIES
 target_link_libraries(appSubSurfaceApp PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
+    Qt6::Graphs
 )
 
 include(GNUInstallDirs)
