@@ -3,7 +3,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 ListView {
-
+    property string title: "Saved Dives"
     required property var diveModel
 
     id: listView
@@ -44,7 +44,7 @@ ListView {
                     leftMargin: 14
                     verticalCenter: parent.verticalCenter
                 }
-                text: model.name
+                text: model.name + " | " + model.date
                 font.pixelSize: 16
                 font.bold: true
                 color: textColor
@@ -54,8 +54,7 @@ ListView {
                 anchors.fill: parent
                 onClicked: {
                     stack.push("DiveDetails.qml", {"dive": model})
-                    header.title = model.name
-                    }
+                }
             }
         }
     }

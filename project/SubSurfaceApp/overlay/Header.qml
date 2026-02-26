@@ -8,11 +8,11 @@ Rectangle {
     height: 70
     color: accentColor
 
-    required property string title
+    property var title
 
     Text {
         anchors.centerIn: parent
-        text: title ? "SubSurface" : title
+        text: title ? title : "SubSurface"
         font.pixelSize: 22
         font.bold: true
         color: "white"
